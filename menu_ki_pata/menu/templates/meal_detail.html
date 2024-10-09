@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h2>{{ meal.name }}</h2>
+    <p>{{ meal.description }}</p>
+    <h3>Nutrition Information</h3>
+    <p>{{ meal.nutrition_info }}</p>
+
+    <h3>Feedback</h3>
+    <ul>
+        {% for feedback in feedback_list %}
+            <li>{{ feedback.rating }} stars: {{ feedback.comments }}</li>
+        {% empty %}
+            <li>No feedback yet for this meal.</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'add_feedback' meal.id %}">Add Feedback</a>
+{% endblock %}

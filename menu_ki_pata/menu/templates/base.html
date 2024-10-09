@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mess Menu</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Mess Menu</h1>
+        <nav>
+            <a href="?meal=breakfast">Breakfast</a>
+            <a href="?meal=lunch">Lunch</a>
+            <a href="?meal=dinner">Dinner</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; Mess Management System</p>
+    </footer>
+</body>
+</html>
